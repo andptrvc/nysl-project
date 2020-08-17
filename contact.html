@@ -2,41 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Contact NYSL</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSL</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/fontawesome-free-5.12.0-web/css/all.min.css" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="flex_webpage">
-        <div class="flex_header">
-            <h1>Northside Youth Soccer League</h1>
-            <div class="flex_header2">
-                <div class="heading">
-                    <span>Contact us</span>
-                    <img class="logo" src="images/nysl_logo.png" alt="logo">
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+
+                <div class="nav-header">
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="./img/nysl_logo.png" alt="logo" class="logo" alt="logo">
+
+                            <span>NYSL</span>
+                        </a>
+                    </div>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <img class="background_header" src="images/design1_image1.jpg" alt="image1">
-            </div>
-        </div>
-        <div class="flex_mainpart">
-            <div class="flex_mainpart2">
-                <ul class="navi">
-                    <li class="li_navi"><a href="index.html" class="inactive">Home</a></li>
-                    <li class="li_navi"><a href="about.html" class="inactive">About NYSL</a></li>
-                    <li class="li_navi"><a href="gameinfo.html" \ class="inactive">Game Information</a></li>
-                    <li class="li_navi"><a href="rules.html" class="inactive">Rules</a></li>
-                    <li class="li_navi"><a href="regform.html" class="inactive">Registration form</a></li>
-                    <li class="li_navi"><a href="contact.html">Contact</a></li>
+
+                <ul class="navbar-items">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About NYSL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regform.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+            </nav>
+
+        </header>
+
+
+        <section class="container">
+            <div class="section-image">
+                <img src="./img/stadium_.jpg" alt="stadium_" class="section-img">
             </div>
-            <div class="flex_mainpart3">
-                <p>Please e-mail us at <a class="e-mail" href="e-mail.html">nysl@csisoccer.org</a>
+            <div class="section-heading">
+                <h1>Contact page</h1>
+            </div>
+            <div class="content">
+                <p>Please e-mail us at <a class="e-mail" href="e-mail.html">nysl@csisoccer.org</a>.</br>
                     <span class="breakline">We will reply to your e-mail as soon as we can.</span>
                 </p>
             </div>
-        </div>
+        </section>
     </div>
+    <!-- Main Script -->
+    <script src="./js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

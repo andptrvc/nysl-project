@@ -1,0 +1,494 @@
+/*=============== Fonts ===============*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/*=============== Variables ===============*/
+:root {
+    --clr-black: ##090100;
+    --clr-green-light: #75912E;
+    --clr-green-dark: #2E4815;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --ff-logo: 'Russo One', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --margin-center: 0 auto;
+}
+
+/*=============== Animation ===============*/
+@keyframes logoRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes logoRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*=============== Main Styles ===============*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: #fcfcfc;
+}
+
+header,
+footer {
+    max-width: var(--max-width);
+    margin: var(--margin-center);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    margin-left: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+img:not(.logo) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+button {
+    outline: none;
+}
+
+.wrapper {
+    max-width: var(--max-width);
+    margin: var(--margin-center);
+    height: 100%;
+    min-height: 100vh;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2);
+    background: white;
+    padding-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+}
+
+fieldset {
+    border: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: var(--spacing);
+}
+
+h3 {
+    letter-spacing: 0.1rem;
+}
+
+/*=============== Customisation ===============*/
+.navbar {
+    padding: 0.5rem;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: 5s linear 0s normal none infinite running logoRotation;
+    -webkit-animation: 5s linear 0s normal none infinite running logoRotation;
+}
+
+.logo-section>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    font-family: var(--ff-logo);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--clr-green-dark);
+}
+
+.logo-section>a>span {
+    padding-left: 0.5rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-green-light);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-toggle:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-items {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.nav-item {
+    display: block;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0.3rem 0.5rem;
+}
+
+.nav-item:hover {
+    background: var(--clr-green-dark);
+    color: white;
+}
+
+.show-items {
+    height: 11rem;
+}
+
+.section-img {
+    border-radius: var(--radius);
+}
+
+.section-heading {
+    text-align: center;
+    color: var(--clr-green-light);
+}
+
+.container {
+    max-width: var(--max-width);
+    width: 98vw;
+    margin: var(--margin-center);
+    padding: 0.5rem;
+}
+
+h3 {
+    color: var(--clr-green-light);
+}
+
+.games-specification {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.tables-content {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.date_column,
+.teams_column,
+.time_column {
+    min-width: 100px;
+    text-align: center;
+}
+
+.tables-content>table {
+    margin: 1rem 0;
+}
+
+.tables-content>table>tr {
+    height: 1.5rem;
+}
+
+.table_heading {
+    background-color: var(--clr-green-light);
+    color: white;
+}
+
+.btn-container {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.tab-btn:nth-child(1) {
+    border-top-left-radius: var(--radius);
+
+}
+
+.tab-btn:nth-child(6) {
+    border-top-right-radius: var(--radius);
+
+}
+
+.tab-btn {
+    padding: 0.5rem 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    display: block;
+    background: var(--clr-green-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    outline: none;
+    color: white;
+}
+
+
+.school {
+    display: none;
+}
+
+.tab-btn.active {
+    background: var(--clr-green-light);
+}
+
+.school div {
+    margin-bottom: 0.5rem;
+}
+
+.school.active {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid var(--clr-green-light);
+    border-bottom-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-top: none;
+    flex-direction: column;
+}
+
+.regulations span,
+.rule-text span {
+    font-weight: bold;
+}
+
+#games-contact-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+#games-contact-info>div {
+    margin-right: 2rem;
+}
+
+.content {
+    max-width: var(--max-width);
+}
+
+.dottedUl {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.rule-item>h3 {
+    margin-top: 0.75rem;
+    text-transform: uppercase;
+}
+
+.rule-text {
+    display: none;
+    transition: var(--transition);
+}
+
+.rule-text.active {
+    display: block;
+}
+
+#showAllRules {
+    color: var(--clr-green-light);
+    cursor: pointer;
+}
+
+fieldset>p {
+    margin-bottom: 0;
+}
+
+.registrationFormFieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.registrationFormFieldset.block {
+    display: block;
+}
+
+.registrationFormFieldset>div,
+.registrationFormFieldset>span {
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+.registrationFormFieldset input:not([type=radio]):not([type=checkbox]),
+.registrationFormFieldset select {
+    margin-left: 0.5rem;
+}
+
+fieldset>p {
+    font-weight: bold;
+}
+
+form>p {
+    font-size: 0.7rem;
+}
+
+.registrationFormFieldset input,
+.registrationFormFieldset select {
+    outline: var(--clr-green-light);
+    border: 1px solid var(--clr-green-light);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius);
+}
+
+#submitBtn {
+    display: block;
+    background: var(--clr-green-dark);
+    border: none;
+    color: white;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+}
+
+#submitBtn:hover {
+    font-size: 1.05rem;
+    transition: var(--transition);
+    background: var(--clr-green-light);
+}
+
+.e-mail {
+    color: var(--clr-green-light);
+}
+
+@media screen and (min-width: 800px) {
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .navbar {
+        max-width: var(--max-width);
+        width: 98vw;
+        margin: var(--margin-center);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .navbar-items {
+        display: flex;
+        height: auto;
+    }
+
+    .nav-item {
+        display: block;
+        font-size: 1rem;
+        text-transform: capitalize;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-item:hover,
+    .nav-item>a:hover {
+        color: var(--clr-green-light);
+        font-weight: 600;
+        background: transparent;
+    }
+
+    .logo-section>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .logo-section>a>span {
+        padding-left: 1rem;
+    }
+
+    .logo {
+        width: 4rem;
+        height: 4rem;
+        animation: 5s linear 0s normal none infinite running logoRotation;
+        -webkit-animation: 5s linear 0s normal none infinite running logoRotation;
+    }
+
+    .school.active {
+        flex-direction: row;
+    }
+
+    .registrationFormFieldset {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem 0;
+        align-items: center;
+    }
+
+    .registrationFormFieldset>div,
+    .registrationFormFieldset>span {
+        margin-right: 1rem;
+    }
+
+    .registrationFormFieldset input:not([type=radio]):not([type=checkbox]),
+    .registrationFormFieldset select {
+        margin-left: 1rem;
+    }
+
+
+}

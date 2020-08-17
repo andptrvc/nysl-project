@@ -2,49 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>NYSL Home page</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSL</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/fontawesome-free-5.12.0-web/css/all.min.css" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="flex_webpage">
-        <div class="flex_header">
-            <h1>Northside Youth Soccer League</h1>
-            <div class="flex_header2">
-                <div class="heading">
-                    <span>Northisde Youth Soccer League</span>
-                    <img class="logo" src="images/nysl_logo.png" alt="logo">
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+
+                <div class="nav-header">
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="./img/nysl_logo.png" alt="logo" class="logo" alt="logo">
+
+                            <span>NYSL</span>
+                        </a>
+                    </div>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <img class="background_header" src="images/design1_image1.jpg" alt="image1">
-            </div>
-        </div>
-        <div class="flex_mainpart">
-            <div class="flex_mainpart2">
-                <ul class="navi">
-                    <li class="li_navi"><a href="index.html">Home</a></li>
-                    <li class="li_navi"><a href="about.html" class="inactive">About NYSL</a></li>
-                    <li class="li_navi"><a href="gameinfo.html" class="inactive">Game Information</a></li>
-                    <li class="li_navi"><a href="rules.html" class="inactive">Rules</a></li>
-                    <li class="li_navi"><a href="regform.html" class="inactive">Registration form</a></li>
-                    <li class="li_navi"><a href="contact.html" class="inactive">Contact</a></li>
+
+                <ul class="navbar-items">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About NYSL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regform.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+            </nav>
+
+        </header>
+
+
+        <section class="container">
+            <div class="section-image">
+                <img src="./img/stadium_.jpg" alt="stadium_" class="section-img">
             </div>
-            <div class="flex_mainpart5">
-                <div>
-                    <p class="date"><span class="dates">August 4</span>
-                        <span class="breakline">&emsp;NYSL Fundraiser</span>
+            <div class="section-heading">
+                <h1>Upcoming events</h1>
+            </div>
+            <div class="content">
+                <div class="content-item">
+                    <p>
+                        <h3>August 4</h3><span>NYSL Fundraiser</span>
                     </p>
-                    <p class="date"><span class="dates">August 16</span>
-                        <span class="breakline">&emsp;Season Kick-off: Meet the teams</span>
+                </div>
+                <div class="content-item">
+                    <p>
+                        <h3>August 16</h3><span>Season Kick-off: Meet the teams</span>
                     </p>
-                    <p class="date"><span class="dates">September 1</span>
-                        <span class="breakline">&emsp;First Game of the Season (Check Game Schedule fordetails)</span>
+                </div>
+                <div class="content-item">
+                    <p>
+                        <h3>September 1</h3><span>First Game of the Season (Check Game Schedule fordetails)</span>
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
+    <!-- Main Script -->
+    <script src="./js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
